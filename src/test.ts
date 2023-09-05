@@ -1,3 +1,3 @@
 export function someFN() {
-    console.log('helloworld!')
+    console.log('helloworld! 231 dwa')
 }
