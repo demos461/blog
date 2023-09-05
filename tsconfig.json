@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/", // Куда производится сборка
     "noImplicitAny": true, // Подсвечивает все места где не указан тип
-    "module": "es6",
+    "module": "ESNext",
     "target": "es5", // В какую спецификацию компилируем
     "jsx": "react-jsx",
     "allowJs": true, // компилятор будет обрабатывать не только TS файлы, но и JS файлы
