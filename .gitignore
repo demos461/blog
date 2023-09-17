@@ -14,6 +14,10 @@
 #storybook build
 /storybook-static
 
+#reg-cli
+.loki/report.html
+.loki/report.json
+
 # misc
 .DS_Store
 .env.local
