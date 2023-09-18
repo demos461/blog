@@ -19,6 +19,8 @@
 }
 
 .content {
+    font-family: var(--font-family-main);
+    color: var(--primary-color);
     padding: 20px;
     border-radius: 5px;
     background: var(--bg-color);
