@@ -1,0 +1,23 @@
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.link {
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.icon {
+    fill: var(--primary-color);
+}
+
+.collapsed {
+    .link {
+        opacity: 0;
+        transition: opacity 0.2s;
+        width: 0;
+    }
+}

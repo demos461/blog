@@ -5,5 +5,15 @@
       "username": "admin",
       "password": "123"
     }
-  ]
+  ],
+  "profile": {
+    "first": "Ilya",
+    "lastname": "Khrapko",
+    "age": 24,
+    "currency": "BYN",
+    "country": "Belarus",
+    "city": "Bobruisk",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/564x/8b/07/72/8b0772f321bca2198113500167252a02.jpg"
+  }
 }

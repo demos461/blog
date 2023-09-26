@@ -33,21 +33,6 @@
     gap: 20px;
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-decoration: none;
-}
-
-.link {
-    opacity: 1;
-}
-
-.icon {
-    fill: var(--primary-color);
-}
-
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
@@ -57,11 +42,5 @@
 
     .lang {
         margin: 0;
-    }
-
-    .link {
-        opacity: 0;
-        transition: opacity 0.2s;
-        width: 0;
     }
 }
