@@ -9,6 +9,7 @@
     // В какую спецификацию компилируем
     "jsx": "react-jsx",
     "allowJs": true,
+    "strict": true,
     // компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "moduleResolution": "node",
     "baseUrl": ".",
