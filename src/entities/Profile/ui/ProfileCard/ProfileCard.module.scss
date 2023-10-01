@@ -1,11 +1,26 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+.ProfileCard {
+    padding: 10px;
 }
 
 .data {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.editing {
+    background-color: var(--secondary-bg-color);
+}
+
+.avatarWrapper {
+    display: flex;
+    justify-content: center;
 }
