@@ -14,4 +14,4 @@ export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm'
 export { updateProfileData } from './model/services/updateProfileData/updateProfileData';
 export {
     getProfileValidateErrors,
-} from './model/selectors/getProfileValidateErrors/getProfileValidateError';
+} from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
