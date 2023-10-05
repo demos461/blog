@@ -3,6 +3,19 @@ import { BuildOptions } from './types/config';
 import { BuildCssLoader } from './loaders/buildCssLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+    const babelLoader = {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+            {
+                loader: 'babel-loader',
+                options: {
+                    plugins: [isDev && require.resolve('react-refresh/babel')].filter(Boolean),
+                },
+            },
+        ],
+    };
+
     // Если не используем typescript - нужен babel-loader
     const typeScriptLoader = {
         test: /\.tsx?$/,
@@ -27,6 +40,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const cssLoader = BuildCssLoader(isDev);
 
     return [
+        babelLoader,
         svgLoader,
         fileLoader,
         typeScriptLoader,
