@@ -1,0 +1,11 @@
+.ArticleDetails {
+    min-height: 100%;
+}
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
