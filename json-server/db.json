@@ -4,13 +4,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "admin"
+      "role": "admin",
+      "avatar": "https://i.pinimg.com/564x/8b/07/72/8b0772f321bca2198113500167252a02.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "avatar": "https://cdn.icon-icons.com/icons2/582/PNG/512/boy_icon-icons.com_55048.png"
     }
   ],
   "profile": {
