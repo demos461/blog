@@ -15,16 +15,30 @@
       "avatar": "https://cdn.icon-icons.com/icons2/582/PNG/512/boy_icon-icons.com_55048.png"
     }
   ],
-  "profile": {
-    "first": "Ilya",
-    "lastname": "Khrapko",
-    "age": 24,
-    "currency": "BYN",
-    "country": "Belarus",
-    "city": "Bobruisk",
-    "username": "admin",
-    "avatar": "https://i.pinimg.com/564x/8b/07/72/8b0772f321bca2198113500167252a02.jpg"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ilya",
+      "lastname": "Khrapko",
+      "age": 24,
+      "currency": "BYN",
+      "country": "Belarus",
+      "city": "Bobruisk",
+      "username": "admin",
+      "avatar": "https://i.pinimg.com/564x/8b/07/72/8b0772f321bca2198113500167252a02.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Ivan",
+      "lastname": "Ivanov",
+      "age": 99,
+      "currency": "BYN",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "user",
+      "avatar": "https://cdn.icon-icons.com/icons2/582/PNG/512/boy_icon-icons.com_55048.png"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -33,7 +47,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -108,6 +124,36 @@
       "text": "some comment 2",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "хелло ворлд",
+      "id": "RP0sKqQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "туц туц",
+      "id": "o1RghSn"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test",
+      "id": "tsyzMSU"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "dwadwa",
+      "id": "HxwdCyI"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hi",
+      "id": "BhtNgfn"
     }
   ]
 }

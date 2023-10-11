@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentList.module.scss';
 import { CommentCard } from '../CommentCard/CommentCard';
@@ -19,6 +20,14 @@ export const CommentList = memo((props: CommentListProps) => {
         isLoading,
     } = props;
     const { t } = useTranslation('article-details');
+
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.CommentList, {}, [className])}>
+                <Loader />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.CommentList, {}, [className])}>
