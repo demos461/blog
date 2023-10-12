@@ -114,18 +114,6 @@
   ],
   "comments": [
     {
-      "id": "1",
-      "text": "some comment 1",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "text": "some comment 2",
-      "articleId": "1",
-      "userId": "2"
-    },
-    {
       "articleId": "1",
       "userId": "1",
       "text": "хелло ворлд",
@@ -136,24 +124,6 @@
       "userId": "2",
       "text": "туц туц",
       "id": "o1RghSn"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "test",
-      "id": "tsyzMSU"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "dwadwa",
-      "id": "HxwdCyI"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "hi",
-      "id": "BhtNgfn"
     }
   ]
 }

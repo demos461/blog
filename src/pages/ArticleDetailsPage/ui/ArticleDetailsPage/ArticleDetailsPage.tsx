@@ -23,7 +23,7 @@ import cls from './ArticleDetailsPage.module.scss';
 import {
     articleDetailsCommentsReducer, getArticleComments,
 } from '../../model/slice/articleDetailsCommentsSlice';
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
+import { getArticleCommentsIsLoading } from '../../model/selectors/commentsSelectors';
 
 interface ArticleDetailsPageProps {
     className?: string;
