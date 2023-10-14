@@ -31,7 +31,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     );
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className])}>
+        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             <Text title={t('Статьи')} />
             <div className={cls.articles}>
                 {articles.length > 0

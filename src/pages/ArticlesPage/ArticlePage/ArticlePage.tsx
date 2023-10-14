@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Article, ArticleList } from 'entities/Article';
+import { Article, ArticleList, ArticleView } from '../../../entities/Article';
 import cls from './ArticlePage.module.scss';
 
 interface ArticlePageProps {
@@ -10,6 +10,11 @@ interface ArticlePageProps {
 
 const article = {
     id: '1',
+    user: {
+        id: '1',
+        username: 'admin',
+        avatar: 'https://i.pinimg.com/564x/8b/07/72/8b0772f321bca2198113500167252a02.jpg',
+    },
     title: 'Javascript news lalalallalalalalalaal',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
@@ -90,7 +95,7 @@ const ArticlePage = (props: ArticlePageProps) => {
 
     return (
         <div className={classNames(cls.ArticlePage, {}, [className])}>
-            <ArticleList articles={[article, article, article, article, article, article, article, article, article]} />
+            <ArticleList view={ArticleView.BIG} articles={[article, article, article, article, article, article, article, article, article]} />
         </div>
     );
 };
