@@ -1,7 +1,6 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Text } from 'shared/ui/Text/Text';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
@@ -20,7 +19,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticleView.SMALL,
         isLoading,
     } = props;
-    const { t } = useTranslation();
 
     const renderArticles = (article: Article) => (
         <ArticleListItem
@@ -30,9 +28,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
         />
     );
 
+    if (isLoading) {
+        return (
+            <div className={cls.loader}>
+                <Loader />
+            </div>
+        );
+    }
+
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            <Text title={t('Статьи')} />
             <div className={cls.articles}>
                 {articles.length > 0
                     ? articles.map(renderArticles)
