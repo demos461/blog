@@ -28,20 +28,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
         />
     );
 
-    if (isLoading) {
-        return (
-            <div className={cls.loader}>
-                <Loader />
-            </div>
-        );
-    }
-
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             <div className={cls.articles}>
                 {articles.length > 0
                     ? articles.map(renderArticles)
                     : null}
+                {isLoading && <Loader />}
             </div>
         </div>
     );
