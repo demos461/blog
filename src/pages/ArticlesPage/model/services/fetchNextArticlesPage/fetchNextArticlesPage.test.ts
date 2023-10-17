@@ -7,7 +7,7 @@ import { fetchNextArticlesPage } from './fetchNextArticlesPage';
 jest.mock('../fetchArticlesList/fetchArticlesList');
 
 describe('fetchNextArticlesPage.test', () => {
-    test('success fetchProfileData', async () => {
+    test('success fetchNextArticlesPage', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
             articlesPage: {
                 page: 2,
@@ -25,7 +25,7 @@ describe('fetchNextArticlesPage.test', () => {
         expect(fetchArticlesList).toBeCalledWith({ page: 3 });
     });
 
-    test('fetchProfileData not called', async () => {
+    test('fetchNextArticlesPage not called', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
             articlesPage: {
                 page: 2,
