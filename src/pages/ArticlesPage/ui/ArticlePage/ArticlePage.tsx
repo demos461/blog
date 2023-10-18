@@ -11,6 +11,8 @@ import { useSelector } from 'react-redux';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
+import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
 import {
     initArticlesPage,
 } from '../../model/services/initArticlesPage/initArticlesPage';
@@ -48,17 +50,14 @@ const ArticlePage = (props: ArticlePageProps) => {
     const view = useSelector(getArticlesPageIsView);
     const isLoading = useSelector(getArticlesPageIsLoading);
     const error = useSelector(getArticlesPageError);
-
-    const onChangeView = useCallback((view: ArticleView) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(initArticlesPage());
+        dispatch(initArticlesPage(searchParams));
     });
 
     return (
@@ -68,7 +67,7 @@ const ArticlePage = (props: ArticlePageProps) => {
                 className={classNames(cls.ArticlePage, {}, [className])}
             >
                 <Text title={t('Статьи')} />
-                <ArticleViewSwitcher view={view} onViewClick={onChangeView} />
+                <ArticlesPageFilters />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
