@@ -1,4 +1,11 @@
 .Card {
-    background: var(--secondary-bg-color);
     padding: 10px;
+}
+
+.normal {
+    background: var(--secondary-bg-color);
+}
+
+.outlined {
+    border: 1px solid var(--primary-color);
 }

@@ -145,7 +145,7 @@
       "views": 653,
       "createdAt": "21.01.2022",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -169,7 +169,7 @@
       "views": 752,
       "createdAt": "16.03.2022",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -193,7 +193,7 @@
       "views": 521,
       "createdAt": "23.04.2022",
       "type": [
-        "IT"
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -217,7 +217,7 @@
       "views": 312,
       "createdAt": "01.03.2022",
       "type": [
-        "IT"
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -241,7 +241,8 @@
       "views": 213,
       "createdAt": "11.01.2022",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -265,7 +266,8 @@
       "views": 1921,
       "createdAt": "29.12.2021",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -289,7 +291,9 @@
       "views": 2301,
       "createdAt": "12.11.2021",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -313,7 +317,9 @@
       "views": 92,
       "createdAt": "01.12.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -337,7 +343,9 @@
       "views": 1254,
       "createdAt": "10.08.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -361,7 +369,8 @@
       "views": 5212,
       "createdAt": "02.02.2021",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -385,7 +394,7 @@
       "views": 653,
       "createdAt": "21.01.2022",
       "type": [
-        "IT"
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -409,7 +418,8 @@
       "views": 653,
       "createdAt": "16.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -433,7 +443,8 @@
       "views": 653,
       "createdAt": "21.01.2022",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -457,7 +468,9 @@
       "views": 653,
       "createdAt": "16.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -553,7 +566,9 @@
       "views": 653,
       "createdAt": "16.02.2022",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE",
+        "ECONOMIC"
       ],
       "blocks": [
         {
@@ -577,7 +592,7 @@
       "views": 653,
       "createdAt": "21.01.2022",
       "type": [
-        "IT"
+        "ECONOMIC"
       ],
       "blocks": [
         {

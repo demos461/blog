@@ -45,6 +45,7 @@ export enum ArticleType {
     IT ='IT',
     SCIENCE='SCIENCE',
     ECONOMIC='ECONOMIC',
+    ALL = 'ALL'
 }
 
 export interface Article {
