@@ -1,3 +1,9 @@
+export { ArticleDetailsPageSchema } from './model/types';
+
+export {
+    ArticleDetainsPageRecommendationsSchema,
+} from './model/types/articleDetainsPageRecommendationsSchema';
+
 export {
     ArticleDetailsCommentsSchema,
 } from './model/types/ArticleDetailsCommentsSchema';
