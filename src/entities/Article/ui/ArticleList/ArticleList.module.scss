@@ -1,19 +1,15 @@
 .SMALL {
-    .articles {
-        margin-top: 30px;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .BIG {
-    .articles {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .loader {

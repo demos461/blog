@@ -1,9 +1,10 @@
 .InputWrapper {
     display: flex;
+    gap: 5px;
 }
 
 .placeholder {
-    margin-right: 5px;
+    white-space: nowrap;
 }
 
 .input {

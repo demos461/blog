@@ -34,9 +34,9 @@ export const Input = memo((props: InputProps) => {
         <div className={classNames(cls.InputWrapper, mods, [className])}>
             {placeholder
                 && (
-                    <div className={cls.placeholder}>
+                    <span className={cls.placeholder}>
                         {`${placeholder}>`}
-                    </div>
+                    </span>
                 )}
             <input
                 className={cls.input}
