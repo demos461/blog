@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
-import { ArticleList, ArticleView, ArticleViewSwitcher } from 'entities/Article';
+import { ArticleList } from 'entities/Article';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -11,11 +11,9 @@ import { useSelector } from 'react-redux';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { useSearchParams } from 'react-router-dom';
-import {
-    initArticlesPage,
-} from '../../model/services/initArticlesPage/initArticlesPage';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
     fetchNextArticlesPage,
 } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
@@ -25,11 +23,7 @@ import {
     getArticlesPageIsView,
 } from '../../model/selectors/articlesPageSelectors';
 import cls from './ArticlePage.module.scss';
-import {
-    articlesPageActions,
-    articlesPageReducer,
-    getArticles,
-} from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer, getArticles } from '../../model/slice/articlesPageSlice';
 
 interface ArticlePageProps {
     className?: string;

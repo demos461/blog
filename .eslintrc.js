@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'eliasxlii-plugin',
     ],
     rules: {
         'no-unused-vars': 'off',
@@ -57,6 +58,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'eliasxlii-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,
