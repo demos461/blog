@@ -5,6 +5,7 @@ import { Text } from 'shared/ui/Text/Text';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 
@@ -23,19 +24,21 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className])}>
+            <HStack justify="center" max>
                 <Loader />
-            </div>
+            </HStack>
         );
     }
 
     return (
-        <div className={classNames(cls.CommentCard, {}, [className])}>
-            <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
-                {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} /> }
-                <Text text={comment.user.username} />
+        <VStack gap="8" max className={classNames(cls.CommentCard, {}, [className])}>
+            <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+                <HStack gap="8">
+                    {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} /> }
+                    <Text text={comment.user.username} />
+                </HStack>
             </AppLink>
             <Text text={comment.text} />
-        </div>
+        </VStack>
     );
 });

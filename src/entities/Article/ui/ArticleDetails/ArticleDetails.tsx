@@ -14,10 +14,9 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
+import { HStack } from 'shared/ui/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import {
-    ArticleCodeBlockComponent,
-} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import {
     ArticleImageBlockComponent,
 } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
@@ -92,36 +91,36 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <div className={cls.loading}>
+            <HStack justify="center" className={cls.loading}>
                 <Loader />
-            </div>
+            </HStack>
 
         );
     } else if (error) {
         content = (
-            <div className={cls.error}>
+            <HStack justify="center" className={cls.error}>
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке статьи')}
                     align={TextAlign.CENTER}
                 />
-            </div>
+            </HStack>
         );
     } else {
         content = (
             <>
-                <div className={cls.avatarWrapper}>
+                <HStack justify="center">
                     <Avatar size={200} src={article?.img} />
-                </div>
+                </HStack>
                 <Text title={article?.title} text={article?.subtitle} size={TextSize.L} />
-                <div className={cls.articleInfo}>
+                <HStack gap="8">
                     <EyeIcon />
                     <Text text={String(article?.views)} />
-                </div>
-                <div className={cls.articleInfo}>
+                </HStack>
+                <HStack gap="8">
                     <CalendarIcon />
                     <Text text={article?.createdAt} />
-                </div>
+                </HStack>
                 {article?.blocks.map(renderBlock)}
             </>
         );
@@ -129,7 +128,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetails, {}, [className])}>
+            <div className={classNames('', {}, [className])}>
                 {content}
             </div>
         </DynamicModuleLoader>

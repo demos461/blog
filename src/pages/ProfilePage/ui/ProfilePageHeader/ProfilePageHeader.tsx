@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
@@ -12,7 +11,8 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -39,10 +39,10 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack justify="between" max className={classNames('', {}, [className])}>
             <Text title={t('Профиль')} />
             {canEdit && (
-                <div className={cls.btnGroup}>
+                <HStack gap="8">
                     { readonly
                         ? (
                             <Button onClick={onEdit}>
@@ -59,9 +59,8 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                                 </Button>
                             </>
                         )}
-                </div>
+                </HStack>
             )}
-
-        </div>
+        </HStack>
     );
 };

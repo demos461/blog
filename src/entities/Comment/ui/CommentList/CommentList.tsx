@@ -3,8 +3,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { Comment } from '../../model/types/comment';
-import cls from './CommentList.module.scss';
 import { CommentCard } from '../CommentCard/CommentCard';
 
 interface CommentListProps {
@@ -23,24 +23,23 @@ export const CommentList = memo((props: CommentListProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentList, {}, [className])}>
+            <HStack justify="center" max>
                 <Loader />
-            </div>
+            </HStack>
         );
     }
 
     return (
-        <div className={classNames(cls.CommentList, {}, [className])}>
+        <VStack gap="16" max className={classNames('', {}, [className])}>
             {comments?.length
                 ? comments.map((comment) => (
                     <CommentCard
                         key={comment.id}
                         comment={comment}
                         isLoading={isLoading}
-                        className={cls.comment}
                     />
                 ))
                 : <Text text={t('Комментарии отсутствуют')} />}
-        </div>
+        </VStack>
     );
 });

@@ -14,6 +14,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Page } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import {
     getArticleDetainsPageRecommendations,
@@ -95,11 +96,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     title={t('Комментарии')}
                     className={cls.commentTitle}
                 />
-                <AddCommentForm onSendComment={onSendComment} />
-                <CommentList
-                    comments={comments}
-                    isLoading={isLoading}
-                />
+                <VStack gap="16" max>
+                    <AddCommentForm onSendComment={onSendComment} />
+                    <CommentList
+                        comments={comments}
+                        isLoading={isLoading}
+                    />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
 
