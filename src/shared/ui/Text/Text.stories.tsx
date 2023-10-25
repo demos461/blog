@@ -46,6 +46,13 @@ onlyText.args = {
     text: 'Text',
 };
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Title',
+    text: 'Text',
+    size: TextSize.S,
+};
+
 export const SizeM = Template.bind({});
 SizeM.args = {
     title: 'Title',

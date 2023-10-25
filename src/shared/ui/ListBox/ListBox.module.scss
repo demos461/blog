@@ -1,0 +1,41 @@
+.ListBox {
+    position: relative;
+}
+
+.trigger {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.options {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 100;
+    background: var(--secondary-bg-color);
+}
+
+.item {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.active {
+    background: var(--bg-color);
+}
+
+.selected {
+    background: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+.disabled {
+    opacity: 0.7;
+}
