@@ -1,9 +1,10 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ArticleView } from '../../model/types/article';
 import { ArticleViewSwitcher } from './ArticleViewSwitcher';
 
 export default {
-    title: 'shared/ArticleViewSwitcher',
+    title: 'entities/Article/ArticleViewSwitcher',
     component: ArticleViewSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -12,5 +13,11 @@ export default {
 
 const Template: ComponentStory<typeof ArticleViewSwitcher> = (args) => <ArticleViewSwitcher {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const ViewSmall = Template.bind({});
+ViewSmall.args = {
+    view: ArticleView.SMALL,
+};
+export const ViewBig = Template.bind({});
+ViewBig.args = {
+    view: ArticleView.BIG,
+};

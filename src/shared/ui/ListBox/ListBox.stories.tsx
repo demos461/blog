@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { ListBox } from './ListBox';
 
 export default {
@@ -13,4 +14,22 @@ export default {
 const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+    label: 'text',
+    items: [
+        {
+            value: 'first',
+            content: 'first',
+        },
+        {
+            value: 'second',
+            content: 'second',
+            disabled: true,
+        },
+        {
+            value: 'third',
+            content: 'third',
+        },
+    ],
+    value: 'listbox',
+};

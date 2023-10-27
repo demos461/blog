@@ -94,9 +94,14 @@ Big.args = {
     articles: [article, article, article],
     view: ArticleView.BIG,
 };
-
 export const Small = Template.bind({});
 Small.args = {
     articles: [article, article, article],
     view: ArticleView.SMALL,
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    articles: [],
+    isLoading: true,
 };
