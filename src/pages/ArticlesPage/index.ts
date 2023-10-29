@@ -1,2 +1,2 @@
 export { ArticlesPageSchema } from './model/types/articlesPageSchema';
-export { ArticlePageAsync as ArticlePage } from './ui/ArticlePage/ArticlePage.async';
+export { ArticlesPageAsync as ArticlePage } from 'pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.async';

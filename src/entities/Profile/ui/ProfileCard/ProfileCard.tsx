@@ -47,7 +47,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <HStack justify="center" className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
+            <HStack justify="center" max className={cls.loading}>
                 <Loader />
             </HStack>
         );
@@ -55,7 +55,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <HStack justify="center" className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <HStack justify="center" max className={cls.error}>
                 <Text
                     theme={TextTheme.ERROR}
                     align={TextAlign.CENTER}
