@@ -14,6 +14,9 @@
 #storybook build
 /storybook-static
 
+#tests reports
+/reports
+
 #reg-cli
 .loki/report.html
 .loki/report.json
