@@ -8,7 +8,7 @@ export const fetchCommentsByArticleId = createAsyncThunk<Comment[], string | und
         const { extra, rejectWithValue } = thunkAPI;
 
         if (!articleId) {
-            rejectWithValue('error');
+            return rejectWithValue('error');
         }
 
         try {
