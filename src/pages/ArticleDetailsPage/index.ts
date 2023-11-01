@@ -1,10 +1,10 @@
-export { ArticleDetailsPageSchema } from './model/types';
+export type { ArticleDetailsPageSchema } from './model/types';
 
-export {
+export type {
     ArticleDetainsPageRecommendationsSchema,
 } from './model/types/articleDetainsPageRecommendationsSchema';
 
-export {
+export type {
     ArticleDetailsCommentsSchema,
 } from './model/types/ArticleDetailsCommentsSchema';
 

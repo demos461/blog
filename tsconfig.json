@@ -21,13 +21,14 @@
     "esModuleInterop": true,
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js (require() module.export) как с обычными пакетами с помощью import
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
     // allowSyntheticDefaultImports Если какая-либо библиотека не имеет default import,
     // лоадеры вроде ts-loader или babel-loader автоматически создают их
     // вместо такого импорта
     // import * as React from 'react';
     // можно писать так
     // import React from 'react';
+    "isolatedModules": true,
   },
   "ts-node": {
     "compilerOptions": {
@@ -38,5 +39,5 @@
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
-  ]
+  ],
 }

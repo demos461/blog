@@ -4,9 +4,10 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { HStack } from 'shared/ui/Stack';
+import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;

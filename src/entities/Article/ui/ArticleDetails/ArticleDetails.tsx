@@ -15,6 +15,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { HStack } from 'shared/ui/Stack';
+import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import {
@@ -28,7 +29,7 @@ import {
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import cls from './ArticleDetails.module.scss';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 
 interface ArticleDetailsProps {
     className?: string;

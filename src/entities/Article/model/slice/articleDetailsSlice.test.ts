@@ -1,4 +1,4 @@
-import { ArticleType } from '../types/article';
+import { ArticleType } from '../consts/consts';
 import { articleDetailsReducer } from './articleDetailsSlice';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 import {

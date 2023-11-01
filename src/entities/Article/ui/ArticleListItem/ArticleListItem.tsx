@@ -10,16 +10,15 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { useNavigate } from 'react-router-dom';
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import {
     ArticleTextBlockComponent,
 } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
 import {
     Article,
-    ArticleBlockType,
     ArticleTextBlock,
-    ArticleView,
+
 } from '../../model/types/article';
 
 interface ArticleListItemProps {

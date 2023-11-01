@@ -1,10 +1,13 @@
 export { getArticleDetailsData } from './model/selectors/articleDetails';
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
-export {
-    Article, ArticleView, ArticleSortField, ArticleType,
+export type {
+    Article,
 } from './model/types/article';
-export { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 export { ArticleViewSwitcher } from './ui/ArtricleViewSwitcher/ArticleViewSwitcher';
 export { ArticleSortSelect } from './ui/ArticleSortSelect/ArticleSortSelect';
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+export { ArticleType } from './model/consts/consts';
+export { ArticleView } from './model/consts/consts';
+export { ArticleSortField } from './model/consts/consts';
