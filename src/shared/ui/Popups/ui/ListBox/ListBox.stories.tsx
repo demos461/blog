@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { ListBox } from './ListBox';
 
 export default {
@@ -32,4 +31,5 @@ Primary.args = {
         },
     ],
     value: 'listbox',
+    direction: 'bottom-right',
 };

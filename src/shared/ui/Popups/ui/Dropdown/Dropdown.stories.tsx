@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
 
 export default {
@@ -27,4 +27,5 @@ Primary.args = {
             content: 'third',
         },
     ],
+    direction: 'top-left',
 };
