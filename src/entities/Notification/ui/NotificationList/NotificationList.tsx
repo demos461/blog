@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { VStack } from 'shared/ui/Stack';
-import { Loader } from 'shared/ui/Loader/Loader';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { VStack } from '@/shared/ui/Stack';
+import { Loader } from '@/shared/ui/Loader/Loader';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 import { useNotifications } from '../../api/notificationApi';
 

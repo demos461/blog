@@ -1,18 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { ProfileCard } from 'entities/Profile';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { ProfileCard } from '@/entities/Profile';
 import {
     DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from 'shared/ui/Stack';
-import { classNames } from 'shared/lib/classNames/classNames';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { VStack } from '@/shared/ui/Stack';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { ValidateProfileError } from '../../model/consts/consts';
 import {
     EditableProfileCardHeader,

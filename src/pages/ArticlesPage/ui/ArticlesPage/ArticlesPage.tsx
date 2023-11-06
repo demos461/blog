@@ -1,15 +1,15 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text } from 'shared/ui/Text/Text';
-import { useTranslation } from 'react-i18next';
-import { Page } from 'widgets/Page/Page';
-import { useSearchParams } from 'react-router-dom';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Text } from '@/shared/ui/Text/Text';
+import { Page } from '@/widgets/Page/Page';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     initArticlesPage,
 } from '../../model/services/initArticlesPage/initArticlesPage';
