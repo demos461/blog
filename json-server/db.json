@@ -727,5 +727,62 @@
       "text": "dwasz",
       "id": "ns5R7J9"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 5,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "nice!",
+      "id": "wWnG-28"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 1,
+      "feedback": "adsaewasda",
+      "id": "FvO2fLa"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "O7a3jAm"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 4,
+      "feedback": "dwadaw",
+      "id": "CisSFbk"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "dwadwadwa",
+      "id": "OoiVFKS"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 2,
+      "feedback": "super",
+      "id": "oLaoGgd"
+    }
   ]
 }
