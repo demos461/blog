@@ -1,8 +1,8 @@
 import { memo, useState } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
 import StarIcon from '@/shared/assets/icons/star.svg';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '../Stack';
 
 interface StarRatingProps {
     className?: string;

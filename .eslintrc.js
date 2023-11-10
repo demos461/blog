@@ -60,14 +60,17 @@ module.exports = {
                 ],
             },
         ],
-        'max-len': ['warn', { code: 130, ignoreComments: true }],
+        'max-len': ['warn', {
+            code: 130,
+            ignoreComments: true,
+        }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
-        'eliasxlii-plugin/path-checker': 'error',
+        'eliasxlii-plugin/path-checker': ['error', { alias: '@' }],
         'react/no-array-index-key': 'off',
     },
     globals: {
