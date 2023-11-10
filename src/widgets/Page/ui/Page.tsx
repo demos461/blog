@@ -15,7 +15,7 @@ import cls from './Page.module.scss';
 interface PageProps {
     className?: string;
     children: ReactNode;
-    onScrollEnd?: () => void
+    onScrollEnd?: () => void;
 }
 
 export const Page = memo((props: PageProps) => {

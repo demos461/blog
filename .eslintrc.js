@@ -71,6 +71,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'eliasxlii-plugin/path-checker': ['error', { alias: '@' }],
+        'eliasxlii-plugin/public-api-imports': ['error', { alias: '@' }],
         'react/no-array-index-key': 'off',
     },
     globals: {
