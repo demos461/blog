@@ -9,7 +9,6 @@ import { Card } from '@/shared/ui/Card/Card';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import {
     ArticleTextBlockComponent,
@@ -20,6 +19,7 @@ import {
     ArticleTextBlock,
 
 } from '../../model/types/article';
+import { RoutePath } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
