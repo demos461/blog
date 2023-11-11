@@ -71,7 +71,13 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'eliasxlii-plugin/path-checker': ['error', { alias: '@' }],
-        'eliasxlii-plugin/public-api-imports': ['error', { alias: '@' }],
+        'eliasxlii-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
         'react/no-array-index-key': 'off',
     },
     globals: {
