@@ -23,9 +23,11 @@ module.exports = {
         'i18next',
         'react-hooks',
         'eliasxlii-plugin',
+        'unused-imports',
     ],
     rules: {
         'no-unused-vars': 'off',
+        'unused-imports/no-unused-imports': 'error',
         '@typescript-eslint/no-unused-vars': 'warn',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],

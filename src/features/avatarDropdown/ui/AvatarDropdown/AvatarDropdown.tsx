@@ -8,7 +8,6 @@ import {
     getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import cls from './AvatarDropdown.module.scss';
 import { RoutePath } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
