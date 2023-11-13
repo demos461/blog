@@ -1,9 +1,12 @@
 import React from 'react';
+
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { AvatarDropdown } from './AvatarDropdown';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+
 import { UserRole } from '@/entities/User';
 import AvatarIcon from '@/shared/assets/tests/storybook.png';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'features/AvatarDropdown',

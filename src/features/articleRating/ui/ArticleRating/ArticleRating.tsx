@@ -1,11 +1,14 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { RatingCard } from '@/entities/Rating';
+
 import { useGetArticleRating, useRateArticle } from '../../api/articleRatingApi';
+
+import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
-import { HStack } from '@/shared/ui/Stack';
 import { Loader } from '@/shared/ui/Loader';
+import { HStack } from '@/shared/ui/Stack';
 
 interface ArticleRatingProps {
     className?: string;

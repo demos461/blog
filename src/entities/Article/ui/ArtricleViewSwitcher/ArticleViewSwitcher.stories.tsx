@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { ArticleView } from '../../model/consts/consts';
+
 import { ArticleViewSwitcher } from './ArticleViewSwitcher';
 
 export default {

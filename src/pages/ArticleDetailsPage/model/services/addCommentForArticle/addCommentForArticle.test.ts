@@ -1,7 +1,8 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import {
     addCommentForArticle,
 } from './addCommentForArticle';
+
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 const data = {
     id: '1',

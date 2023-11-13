@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:import/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -24,6 +25,7 @@ module.exports = {
         'react-hooks',
         'eliasxlii-plugin',
         'unused-imports',
+        'import',
     ],
     rules: {
         'no-unused-vars': 'off',
@@ -35,6 +37,33 @@ module.exports = {
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
+        'import/order': [
+            'error',
+            {
+                'newlines-between': 'always',
+                pathGroupsExcludedImportTypes: [
+                    'react',
+                ],
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
+                },
+                groups: [
+                    'builtin',
+                    'external',
+                    'parent',
+                    'sibling',
+                    'index',
+                ],
+                pathGroups: [
+                    {
+                        pattern: 'react',
+                        group: 'external',
+                        position: 'before',
+                    },
+                ],
+            },
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -93,6 +122,21 @@ module.exports = {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true,
+    },
+    settings: {
+        'import/resolver': {
+            node: {
+                paths: [
+                    'src',
+                ],
+                extensions: [
+                    '.js',
+                    '.jsx',
+                    '.ts',
+                    '.tsx',
+                ],
+            },
+        },
     },
     overrides: [
         {

@@ -1,25 +1,28 @@
 import { memo, useCallback } from 'react';
-import { useSelector } from 'react-redux';
+
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { AddCommentForm } from '@/features/AddCommentForm';
-import { CommentList } from '@/entities/Comment';
-import { VStack } from '@/shared/ui/Stack';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextSize } from '@/shared/ui/Text';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import {
-    fetchCommentsByArticleId,
-} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import {
-    getArticleComments,
-} from '../../model/slice/articleDetailsCommentsSlice';
+import { useSelector } from 'react-redux';
+
 import {
     getArticleCommentsIsLoading,
 } from '../../model/selectors/commentsSelectors';
 import {
     addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import {
+    fetchCommentsByArticleId,
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import {
+    getArticleComments,
+} from '../../model/slice/articleDetailsCommentsSlice';
+
+import { CommentList } from '@/entities/Comment';
+import { AddCommentForm } from '@/features/AddCommentForm';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 interface ArticleDetailsCommentsProps {
     className?: string;

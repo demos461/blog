@@ -1,7 +1,10 @@
 import React from 'react';
+
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import AvatarImg from '@/shared/assets/tests/storybook.png';
+
 import { CommentList } from './CommentList';
+
+import AvatarImg from '@/shared/assets/tests/storybook.png';
 
 export default {
     title: 'entities/Comment/CommentList',

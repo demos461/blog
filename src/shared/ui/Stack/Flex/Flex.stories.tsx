@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Flex } from './Flex';
 
 export default {
