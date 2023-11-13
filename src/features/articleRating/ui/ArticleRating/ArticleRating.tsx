@@ -5,7 +5,7 @@ import { RatingCard } from '@/entities/Rating';
 import { useGetArticleRating, useRateArticle } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/Stack';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader';
 
 interface ArticleRatingProps {
     className?: string;

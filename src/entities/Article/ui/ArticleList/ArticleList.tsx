@@ -1,8 +1,8 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Loader } from '@/shared/ui/Loader/Loader';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Loader } from '@/shared/ui/Loader';
+import { Text, TextSize } from '@/shared/ui/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';

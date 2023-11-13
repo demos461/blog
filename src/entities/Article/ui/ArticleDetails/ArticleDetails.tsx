@@ -9,9 +9,9 @@ import {
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     Text, TextAlign, TextSize, TextTheme,
-} from '@/shared/ui/Text/Text';
-import { Loader } from '@/shared/ui/Loader/Loader';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+} from '@/shared/ui/Text';
+import { Loader } from '@/shared/ui/Loader';
+import { Avatar } from '@/shared/ui/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar.svg';
 import { HStack } from '@/shared/ui/Stack';
