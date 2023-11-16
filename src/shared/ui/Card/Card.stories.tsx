@@ -4,9 +4,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Card } from './Card';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/shared/const/theme';
-
 export default {
     title: 'shared/Card',
     component: Card,
@@ -17,19 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     children: 'Text',
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    children: 'Text',
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Teal = Template.bind({});
-Teal.args = {
-    children: 'Text',
-};
-Teal.decorators = [ThemeDecorator(Theme.TEAL)];

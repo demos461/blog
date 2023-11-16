@@ -17,9 +17,17 @@ export const parameters = {
         },
     },
     layout: 'full',
+    themes: {
+        default: 'light',
+        list: [
+            { name: 'light', class: Theme.LIGHT, color: '#fff' },
+            { name: 'dark', class: Theme.DARK, color: '#1f1f1f' },
+            { name: 'teal', class: Theme.TEAL, color: '#354f52' },
+        ],
+    },
 };
 
 addDecorator(StyleDecorator);
-addDecorator(ThemeDecorator(Theme.LIGHT));
+addDecorator(ThemeDecorator());
 addDecorator(RouterDecorator);
 addDecorator(SuspenseDecorator);
