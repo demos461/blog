@@ -9,7 +9,7 @@ import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUserName';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
@@ -38,7 +38,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text className={cls.appName} title={t('ELIASXLII')} />
-                <AppLink to={RoutePath.articles_create} className={cls.createLink}>
+                <AppLink to={getRouteArticleCreate()} className={cls.createLink}>
                     {t('Создать статью')}
                 </AppLink>
                 <HStack gap="32" className={cls.actions}>
