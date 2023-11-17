@@ -19,11 +19,12 @@ import cls from './ArticlesPageFilters.module.scss';
 
 import {
     ArticleSortField,
-    ArticleSortSelect, ArticleType,
-    ArticleTypeTabs,
+    ArticleType,
     ArticleView,
-    ArticleViewSwitcher,
 } from '@/entities/Article';
+import { ArticleSortSelect } from '@/features/ArticleSortSelect';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSwitcher } from '@/features/ArticleViewSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';

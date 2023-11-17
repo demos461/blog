@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { ArticleView } from '../../model/consts/consts';
+import { ArticleView } from '../../../../entities/Article/model/consts/consts';
 
 import cls from './ArticleViewSwitcher.module.scss';
 

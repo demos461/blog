@@ -2,12 +2,12 @@ import React from 'react';
 
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { ArticleView } from '../../model/consts/consts';
+import { ArticleView } from '../../../../entities/Article/model/consts/consts';
 
 import { ArticleViewSwitcher } from './ArticleViewSwitcher';
 
 export default {
-    title: 'entities/Article/ArticleViewSwitcher',
+    title: 'features/ArticleViewSwitcher',
     component: ArticleViewSwitcher,
     argTypes: {
         backgroundColor: { control: 'color' },
