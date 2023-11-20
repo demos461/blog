@@ -6,7 +6,6 @@ import { ProfileCard } from './ProfileCard';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import AvatarImg from '@/shared/assets/tests/storybook.png';
 
 export default {
     title: 'entities/ProfileCard',
@@ -28,7 +27,7 @@ Primary.args = {
         first: 'adminushka',
         city: 'Neverland',
         currency: Currency.BYN,
-        avatar: AvatarImg,
+        avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
     },
 };
 
