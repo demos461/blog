@@ -15,7 +15,7 @@
 /storybook-static
 
 #tests reports
-/reports
+/reports/unit
 
 #reg-cli
 .loki/report.html
