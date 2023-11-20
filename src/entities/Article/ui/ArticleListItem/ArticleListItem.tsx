@@ -19,10 +19,12 @@ import cls from './ArticleListItem.module.scss';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { getRouteArticleDetails, getRouteProfile } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '@/shared/ui/AppImage';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
+import { Loader } from '@/shared/ui/Loader';
 import { Text, TextAlign } from '@/shared/ui/Text';
 
 interface ArticleListItemProps {
@@ -71,7 +73,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <Text title={article.title} className={cls.title} />
                     {types}
-                    <img className={cls.img} src={article.img} alt={article.title} />
+                    <AppImage className={cls.img} src={article.img} alt={article.title} />
                     {textBlocks && (
                         <ArticleTextBlockComponent block={textBlocks} className={cls.textBlock} />
                     )}
@@ -96,7 +98,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         >
             <Card className={cls.card}>
                 <div className={cls.imgWrapper}>
-                    <img className={cls.img} src={article.img} alt={article.title} />
+                    <AppImage fallback={<Loader />} className={cls.img} src={article.img} alt={article.title} />
                     <Text text={article.createdAt} className={cls.date} />
                 </div>
                 <div className={cls.info}>
