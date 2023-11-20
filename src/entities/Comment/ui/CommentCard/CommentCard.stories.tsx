@@ -4,8 +4,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { CommentCard } from './CommentCard';
 
-import AvatarImg from '@/shared/assets/tests/storybook.png';
-
 export default {
     title: 'entities/Comment/CommentCard',
     component: CommentCard,
@@ -24,7 +22,7 @@ Primary.args = {
         user: {
             id: '1',
             username: 'Vasya',
-            avatar: AvatarImg,
+            avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
         },
     },
 };
@@ -38,7 +36,7 @@ Loading.args = {
         user: {
             id: '1',
             username: 'Vasya',
-            avatar: AvatarImg,
+            avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
         },
     },
 };

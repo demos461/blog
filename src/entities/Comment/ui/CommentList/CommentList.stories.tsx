@@ -4,8 +4,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { CommentList } from './CommentList';
 
-import AvatarImg from '@/shared/assets/tests/storybook.png';
-
 export default {
     title: 'entities/Comment/CommentList',
     component: CommentList,
@@ -25,7 +23,7 @@ Primary.args = {
             user: {
                 id: '1',
                 username: 'Vasya',
-                avatar: AvatarImg,
+                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
             },
         },
         {
