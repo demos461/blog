@@ -28,7 +28,8 @@
     "generate:slice": "node ./scripts/createSlice/index.js"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "eslint"
+    "**/*.{ts,tsx}": "eslint",
+    "**/*.scss": "npx stylelint \"**/*.scss\""
   },
   "repository": {
     "type": "git",
