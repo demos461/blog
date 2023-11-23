@@ -20,7 +20,7 @@ const preview: Preview = {
                 dark: Theme.DARK,
                 teal: Theme.TEAL,
             },
-            defaultTheme: Theme.LIGHT,
+            defaultTheme: 'light',
         }),
         RouterDecorator,
         StyleDecorator,
