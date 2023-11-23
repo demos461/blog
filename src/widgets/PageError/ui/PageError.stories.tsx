@@ -1,18 +1,15 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { PageError } from './PageError';
 
-export default {
+const meta:Meta<typeof PageError> = {
     title: 'widgets/PageError',
     component: PageError,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof PageError>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />;
+type Story = StoryObj<typeof PageError>;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Primary: Story = {
+    args: {},
+};

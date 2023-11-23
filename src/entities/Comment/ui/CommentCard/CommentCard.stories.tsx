@@ -1,42 +1,40 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { CommentCard } from './CommentCard';
 
-export default {
+const meta: Meta<typeof CommentCard> = {
     title: 'entities/Comment/CommentCard',
     component: CommentCard,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof CommentCard>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof CommentCard> = (args) => <CommentCard {...args} />;
+type Story = StoryObj<typeof CommentCard>
 
-export const Primary = Template.bind({});
-Primary.args = {
-    comment: {
-        id: '1',
-        text: 'hello world',
-        user: {
+export const Primary: Story = {
+    args: {
+        comment: {
             id: '1',
-            username: 'Vasya',
-            avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+            text: 'hello world',
+            user: {
+                id: '1',
+                username: 'Vasya',
+                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+            },
         },
     },
 };
 
-export const Loading = Template.bind({});
-Loading.args = {
-    isLoading: true,
-    comment: {
-        id: '1',
-        text: 'hello world',
-        user: {
+export const Loading: Story = {
+    args: {
+        isLoading: true,
+        comment: {
             id: '1',
-            username: 'Vasya',
-            avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+            text: 'hello world',
+            user: {
+                id: '1',
+                username: 'Vasya',
+                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+            },
         },
     },
 };

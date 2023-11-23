@@ -1,26 +1,25 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-
-import { ArticleView } from '../../../../entities/Article/model/consts/consts';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleViewSwitcher } from './ArticleViewSwitcher';
 
-export default {
+import { ArticleView } from '@/entities/Article';
+
+const meta:Meta<typeof ArticleViewSwitcher> = {
     title: 'features/ArticleViewSwitcher',
     component: ArticleViewSwitcher,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleViewSwitcher>;
-
-const Template: ComponentStory<typeof ArticleViewSwitcher> = (args) => <ArticleViewSwitcher {...args} />;
-
-export const ViewSmall = Template.bind({});
-ViewSmall.args = {
-    view: ArticleView.SMALL,
 };
-export const ViewBig = Template.bind({});
-ViewBig.args = {
-    view: ArticleView.BIG,
+export default meta;
+
+type Story = StoryObj<typeof ArticleViewSwitcher>;
+
+export const ViewSmall:Story = {
+    args: {
+        view: ArticleView.SMALL,
+    },
+};
+
+export const ViewBig: Story = {
+    args: {
+        view: ArticleView.BIG,
+    },
 };

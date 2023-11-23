@@ -1,18 +1,18 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-export default {
-    title: 'widgets/ThemeSwitcher',
+const meta:Meta<typeof ThemeSwitcher> = {
+    title: 'features/ThemeSwitcher',
     component: ThemeSwitcher,
-    argTypes: {
-        backgroundColor: { control: 'color' },
+
+};
+export default meta;
+
+type Story = StoryObj<typeof ThemeSwitcher>;
+
+export const Primary : Story = {
+    args: {
+
     },
-} as ComponentMeta<typeof ThemeSwitcher>;
-
-const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {};
+};

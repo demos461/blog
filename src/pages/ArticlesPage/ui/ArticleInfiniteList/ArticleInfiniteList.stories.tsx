@@ -1,21 +1,20 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleInfiniteList } from './ArticleInfiniteList';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
-export default {
+const meta:Meta<typeof ArticleInfiniteList> = {
     title: 'pages/ArticlesPage/ArticleInfiniteList',
     component: ArticleInfiniteList,
-    argTypes: {
-        backgroundColor: { control: 'color' },
+};
+export default meta;
+
+type Story = StoryObj<typeof ArticleInfiniteList>;
+
+export const Primary: Story = {
+    args: {
+
     },
-} as ComponentMeta<typeof ArticleInfiniteList>;
-
-const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => <ArticleInfiniteList {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {};
-Primary.decorators = [StoreDecorator({})];
+    decorators: [StoreDecorator({})],
+};

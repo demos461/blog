@@ -1,28 +1,26 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Avatar } from './Avatar';
 
-export default {
+const meta:Meta<typeof Avatar> = {
     title: 'shared/Avatar',
     component: Avatar,
-    argTypes: {
-        backgroundColor: { control: 'color' },
+};
+export default meta;
+
+type Story = StoryObj<typeof Avatar>;
+
+export const Primary : Story = {
+    args: {
+        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+        alt: 'Аватар',
     },
-} as ComponentMeta<typeof Avatar>;
-
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
-    alt: 'Аватар',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
-    size: 50,
-    alt: 'Аватар',
+export const Small: Story = {
+    args: {
+        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+        size: 50,
+        alt: 'Аватар',
+    },
 };

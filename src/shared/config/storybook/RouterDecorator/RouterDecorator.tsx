@@ -1,8 +1,8 @@
-import { Story } from '@storybook/react';
+import { Decorator } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 
-export const RouterDecorator = (StoryComponent: Story) => (
+export const RouterDecorator: Decorator = (Story) => (
     <BrowserRouter>
-        <StoryComponent />
+        <Story />
     </BrowserRouter>
 );

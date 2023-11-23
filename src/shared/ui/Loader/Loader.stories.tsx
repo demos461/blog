@@ -1,18 +1,15 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Loader } from './Loader';
 
-export default {
+const meta:Meta<typeof Loader> = {
     title: 'shared/Loader',
     component: Loader,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Loader>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
+type Story = StoryObj<typeof Loader>;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Primary : Story = {
+    args: {},
+};

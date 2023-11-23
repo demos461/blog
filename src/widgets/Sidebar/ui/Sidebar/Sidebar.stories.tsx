@@ -1,31 +1,29 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Sidebar } from './Sidebar';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
-export default {
+const meta:Meta<typeof Sidebar> = {
     title: 'widgets/Sidebar',
     component: Sidebar,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Sidebar>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
+type Story = StoryObj<typeof Sidebar>;
 
-export const Primary = Template.bind({});
-Primary.args = {};
-Primary.decorators = [StoreDecorator({
-    user: {
-        authData: {},
-    },
-})];
+export const Primary : Story = {
+    args: {},
+    decorators: [StoreDecorator({
+        user: {
+            authData: {},
+        },
+    })],
+};
 
-export const NoAuth = Template.bind({});
-NoAuth.args = {};
-NoAuth.decorators = [StoreDecorator({
-    user: {},
-})];
+export const NoAuth : Story = {
+    args: {},
+    decorators: [StoreDecorator({
+        user: {},
+    })],
+};

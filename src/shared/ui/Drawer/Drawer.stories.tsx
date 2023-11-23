@@ -1,18 +1,15 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Drawer } from './Drawer';
 
-export default {
+const meta:Meta<typeof Drawer> = {
     title: 'shared/Drawer',
     component: Drawer,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Drawer>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof Drawer> = (args) => <Drawer {...args} />;
+type Story = StoryObj<typeof Drawer>;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Primary : Story = {
+    args: {},
+};

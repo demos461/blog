@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
 import {
@@ -9,15 +7,13 @@ import {
 
 import { ArticleListItem } from './ArticleListItem';
 
-export default {
+const meta: Meta<typeof ArticleListItem> = {
     title: 'entities/Article/ArticleListItem',
     component: ArticleListItem,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleListItem>;
+};
+export default meta;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+type Story = StoryObj<typeof ArticleListItem>
 
 const article: Article = {
     id: '1',
@@ -93,14 +89,16 @@ const article: Article = {
     ],
 };
 
-export const Big = Template.bind({});
-Big.args = {
-    article,
-    view: ArticleView.BIG,
+export const Big : Story = {
+    args: {
+        article,
+        view: ArticleView.BIG,
+    },
 };
 
-export const Small = Template.bind({});
-Small.args = {
-    article,
-    view: ArticleView.SMALL,
+export const Small: Story = {
+    args: {
+        article,
+        view: ArticleView.SMALL,
+    },
 };
