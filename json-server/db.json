@@ -66,6 +66,15 @@
         "manager"
       ],
       "avatar": ""
+    },
+    {
+      "id": "4",
+      "username": "testUser",
+      "password": "123",
+      "roles": [
+        "admin"
+      ],
+      "avatar": "https://cdn.icon-icons.com/icons2/582/PNG/512/boy_icon-icons.com_55048.png"
     }
   ],
   "profile": [
@@ -101,6 +110,17 @@
       "city": "Minsk",
       "username": "manager",
       "avatar": "https://snacknation.com/wp-content/uploads/2021/07/shutterstock_1084761839-scaled.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Test",
+      "lastname": "Testov",
+      "age": 42,
+      "currency": "USD",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "testUser",
+      "avatar": "https://cdn.icon-icons.com/icons2/582/PNG/512/boy_icon-icons.com_55048.png"
     }
   ],
   "articles": [
