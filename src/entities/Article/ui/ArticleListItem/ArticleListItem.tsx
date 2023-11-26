@@ -56,7 +56,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             (block) => block.type === ArticleBlockType.TEXT,
         ) as ArticleTextBlock;
         return (
-            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])} data-testid="ArticleListItem">
                 <Card>
                     <div className={cls.header}>
                         <AppLink to={getRouteProfile(article.user.id)} className={cls.user}>
@@ -92,6 +92,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
+            data-testid="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
