@@ -22,22 +22,11 @@ interface ArticleListProps {
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const {
-        className,
-        articles,
-        view = ArticleView.SMALL,
-        isLoading,
-        target,
-    } = props;
+    const { className, articles, view = ArticleView.SMALL, isLoading, target } = props;
     const { t } = useTranslation('article');
 
     const renderArticles = (article: Article) => (
-        <ArticleListItem
-            key={article.id}
-            article={article}
-            view={view}
-            target={target}
-        />
+        <ArticleListItem key={article.id} article={article} view={view} target={target} />
     );
 
     if (!isLoading && !articles.length) {
@@ -49,11 +38,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <div className={classNames('', {}, [className, cls[view]])} data-testid="ArticleList">
-            {articles.length > 0
-                ? articles.map(renderArticles)
-                : null}
-            {isLoading && <HStack justify="center" max><Loader /></HStack>}
+        <div
+            className={classNames('', {}, [className, cls[view]])}
+            data-testid="ArticleList"
+        >
+            {articles.length > 0 ? articles.map(renderArticles) : null}
+            {isLoading && (
+                <HStack justify="center" max>
+                    <Loader />
+                </HStack>
+            )}
         </div>
     );
 });

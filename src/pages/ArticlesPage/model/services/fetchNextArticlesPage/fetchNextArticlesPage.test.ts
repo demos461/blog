@@ -1,6 +1,4 @@
-import {
-    fetchArticlesList,
-} from '../fetchArticlesList/fetchArticlesList';
+import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
 import { fetchNextArticlesPage } from './fetchNextArticlesPage';
 

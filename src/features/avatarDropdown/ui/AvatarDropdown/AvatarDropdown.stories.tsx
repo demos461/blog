@@ -13,32 +13,32 @@ export default meta;
 
 type Story = StoryObj<typeof AvatarDropdown>;
 
-export const Admin : Story = {
-    args: {
-
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {
-                id: '1',
-                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
-                roles: [UserRole.ADMIN],
+export const Admin: Story = {
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {
+                    id: '1',
+                    avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+                    roles: [UserRole.ADMIN],
+                },
             },
-        },
-    })],
+        }),
+    ],
 };
 
 export const User: Story = {
-    args: {
-
-    },
-    decorators: [StoreDecorator({
-        user: {
-            authData: {
-                id: '1',
-                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
-                roles: [UserRole.USER],
+    args: {},
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {
+                    id: '1',
+                    avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/220px-Kittyply_edit1.jpg',
+                    roles: [UserRole.USER],
+                },
             },
-        },
-    })],
+        }),
+    ],
 };

@@ -4,7 +4,7 @@ import { ArticleViewSwitcher } from './ArticleViewSwitcher';
 
 import { ArticleView } from '@/entities/Article';
 
-const meta:Meta<typeof ArticleViewSwitcher> = {
+const meta: Meta<typeof ArticleViewSwitcher> = {
     title: 'features/ArticleViewSwitcher',
     component: ArticleViewSwitcher,
 };
@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof ArticleViewSwitcher>;
 
-export const ViewSmall:Story = {
+export const ViewSmall: Story = {
     args: {
         view: ArticleView.SMALL,
     },

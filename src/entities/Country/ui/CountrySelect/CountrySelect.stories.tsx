@@ -11,7 +11,5 @@ export default meta;
 type Story = StoryObj<typeof CountrySelect>;
 
 export const Primary: Story = {
-    args: {
-
-    },
+    args: {},
 };

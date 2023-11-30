@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { AppLink, AppLinkTheme } from './AppLink';
 
-const meta:Meta<typeof AppLink> = {
+const meta: Meta<typeof AppLink> = {
     title: 'shared/AppLink',
     component: AppLink,
     args: {
@@ -20,7 +20,7 @@ export const Primary: Story = {
     },
 };
 
-export const Secondary : Story = {
+export const Secondary: Story = {
     args: {
         children: 'Text',
         theme: AppLinkTheme.SECONDARY,

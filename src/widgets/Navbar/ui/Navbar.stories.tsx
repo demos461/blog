@@ -4,7 +4,7 @@ import { Navbar } from './Navbar';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
-const meta:Meta<typeof Navbar> = {
+const meta: Meta<typeof Navbar> = {
     title: 'widgets/Navbar',
     component: Navbar,
     decorators: [
@@ -18,9 +18,7 @@ export default meta;
 type Story = StoryObj<typeof Navbar>;
 
 export const Primary: Story = {
-    args: {
-
-    },
+    args: {},
     parameters: {
         mockData: [
             {

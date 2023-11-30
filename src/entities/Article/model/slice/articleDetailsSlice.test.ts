@@ -1,7 +1,5 @@
 import { ArticleType } from '../consts/consts';
-import {
-    fetchArticleById,
-} from '../services/fetchArticleById/fetchArticleById';
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 
 import { articleDetailsReducer } from './articleDetailsSlice';
@@ -28,10 +26,12 @@ describe('articleDetailsReducer.test', () => {
             error: undefined,
             data: undefined,
         };
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.pending,
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.pending,
+            ),
+        ).toEqual({
             isLoading: true,
             error: undefined,
         });
@@ -41,10 +41,12 @@ describe('articleDetailsReducer.test', () => {
         const state: DeepPartial<ArticleDetailsSchema> = {
             isLoading: true,
         };
-        expect(articleDetailsReducer(
-            state as ArticleDetailsSchema,
-            fetchArticleById.fulfilled(data, '', ''),
-        )).toEqual({
+        expect(
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.fulfilled(data, '', ''),
+            ),
+        ).toEqual({
             isLoading: false,
             error: undefined,
             data,

@@ -16,20 +16,17 @@ interface TabsProps {
     tabs: TabItem[];
     value: string;
     onTabClick: (tab: TabItem) => void;
-
 }
 
 export const Tabs = memo((props: TabsProps) => {
-    const {
-        className,
-        tabs,
-        onTabClick,
-        value,
-    } = props;
+    const { className, tabs, onTabClick, value } = props;
 
-    const clickHandler = useCallback((tab: TabItem) => () => {
-        onTabClick(tab);
-    }, [onTabClick]);
+    const clickHandler = useCallback(
+        (tab: TabItem) => () => {
+            onTabClick(tab);
+        },
+        [onTabClick],
+    );
 
     return (
         <div className={classNames(cls.Tabs, {}, [className])}>

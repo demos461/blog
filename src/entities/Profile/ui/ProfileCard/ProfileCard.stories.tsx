@@ -5,10 +5,9 @@ import { ProfileCard } from './ProfileCard';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 
-const meta:Meta<typeof ProfileCard> = {
+const meta: Meta<typeof ProfileCard> = {
     title: 'entities/ProfileCard',
     component: ProfileCard,
-
 };
 export default meta;
 
@@ -35,7 +34,7 @@ export const withError: Story = {
     },
 };
 
-export const isLoading : Story = {
+export const isLoading: Story = {
     args: {
         isLoading: true,
     },

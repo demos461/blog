@@ -7,7 +7,7 @@ import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
 const ProfilePage = () => {
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
 
     return (
         <Page data-testid="ProfilePage">
@@ -15,7 +15,6 @@ const ProfilePage = () => {
                 <EditableProfileCard id={id} />
             </VStack>
         </Page>
-
     );
 };
 

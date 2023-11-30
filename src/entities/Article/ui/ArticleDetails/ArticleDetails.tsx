@@ -13,9 +13,7 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { ArticleBlock } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import {
-    ArticleImageBlockComponent,
-} from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 import cls from './ArticleDetails.module.scss';
@@ -31,9 +29,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { Avatar } from '@/shared/ui/Avatar';
 import { Loader } from '@/shared/ui/Loader';
 import { HStack } from '@/shared/ui/Stack';
-import {
-    Text, TextAlign, TextSize, TextTheme,
-} from '@/shared/ui/Text';
+import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -45,10 +41,7 @@ const reducers: ReducersList = {
 };
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
-    const {
-        className,
-        id,
-    } = props;
+    const { className, id } = props;
     const { t } = useTranslation('article-details');
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
@@ -57,32 +50,32 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
-        case ArticleBlockType.TEXT:
-            return (
-                <ArticleTextBlockComponent
-                    key={block.id}
-                    block={block}
-                    className={cls.block}
-                />
-            );
-        case ArticleBlockType.CODE:
-            return (
-                <ArticleCodeBlockComponent
-                    key={block.id}
-                    block={block}
-                    className={cls.block}
-                />
-            );
-        case ArticleBlockType.IMAGE:
-            return (
-                <ArticleImageBlockComponent
-                    key={block.id}
-                    block={block}
-                    className={cls.block}
-                />
-            );
-        default:
-            return null;
+            case ArticleBlockType.TEXT:
+                return (
+                    <ArticleTextBlockComponent
+                        key={block.id}
+                        block={block}
+                        className={cls.block}
+                    />
+                );
+            case ArticleBlockType.CODE:
+                return (
+                    <ArticleCodeBlockComponent
+                        key={block.id}
+                        block={block}
+                        className={cls.block}
+                    />
+                );
+            case ArticleBlockType.IMAGE:
+                return (
+                    <ArticleImageBlockComponent
+                        key={block.id}
+                        block={block}
+                        className={cls.block}
+                    />
+                );
+            default:
+                return null;
         }
     }, []);
 
@@ -99,7 +92,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             <HStack justify="center" className={cls.loading}>
                 <Loader />
             </HStack>
-
         );
     } else if (error) {
         content = (
@@ -133,7 +125,10 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div data-testid="ArticleDetails.Info" className={classNames('', {}, [className])}>
+            <div
+                data-testid="ArticleDetails.Info"
+                className={classNames('', {}, [className])}
+            >
                 {content}
             </div>
         </DynamicModuleLoader>

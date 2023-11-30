@@ -18,9 +18,7 @@ interface ArticleDetailsPageHeaderProps {
 }
 
 export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
     const { t } = useTranslation('article-details');
     const navigate = useNavigate();
     const canEdit = useSelector(getCanEditArticle);
@@ -41,7 +39,7 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
             <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 {t('Назад к списку')}
             </Button>
-            { canEdit && (
+            {canEdit && (
                 <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle}>
                     {t('Редактировать')}
                 </Button>

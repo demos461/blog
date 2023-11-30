@@ -1,19 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
-import {
-    Article,
-} from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 import { ArticleList } from './ArticleList';
 
-const meta:Meta<typeof ArticleList> = {
+const meta: Meta<typeof ArticleList> = {
     title: 'entities/Article/ArticleList',
     component: ArticleList,
 };
 export default meta;
 
-type Story = StoryObj<typeof ArticleList>
+type Story = StoryObj<typeof ArticleList>;
 
 const article: Article = {
     id: '1',

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, ButtonSize, ButtonTheme } from './Button';
 
-const meta:Meta<typeof Button> = {
+const meta: Meta<typeof Button> = {
     title: 'shared/Button',
     component: Button,
 };
@@ -15,49 +15,49 @@ export const Primary: Story = {
     },
 };
 
-export const PrimarySizeL : Story = {
+export const PrimarySizeL: Story = {
     args: {
         children: 'Text',
         size: ButtonSize.L,
     },
 };
 
-export const PrimarySizeXL : Story = {
+export const PrimarySizeXL: Story = {
     args: {
         children: 'Text',
         size: ButtonSize.XL,
     },
 };
 
-export const Secondary : Story = {
+export const Secondary: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.CLEAR,
     },
 };
 
-export const Outline : Story = {
+export const Outline: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.OUTLINE,
     },
 };
 
-export const BackgroundTheme : Story = {
+export const BackgroundTheme: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.BACKGROUND,
     },
 };
 
-export const BackGroundInvertedTheme : Story = {
+export const BackGroundInvertedTheme: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.BACKGROUND_INVERTED,
     },
 };
 
-export const Square : Story = {
+export const Square: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.BACKGROUND,
@@ -65,7 +65,7 @@ export const Square : Story = {
     },
 };
 
-export const SquareSizeM : Story = {
+export const SquareSizeM: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.BACKGROUND_INVERTED,
@@ -74,7 +74,7 @@ export const SquareSizeM : Story = {
     },
 };
 
-export const SquareSizeL : Story = {
+export const SquareSizeL: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.BACKGROUND_INVERTED,
@@ -82,7 +82,7 @@ export const SquareSizeL : Story = {
         size: ButtonSize.L,
     },
 };
-export const SquareSizeXL : Story = {
+export const SquareSizeXL: Story = {
     args: {
         children: '>',
         theme: ButtonTheme.BACKGROUND_INVERTED,
@@ -91,7 +91,7 @@ export const SquareSizeXL : Story = {
     },
 };
 
-export const Disabled : Story = {
+export const Disabled: Story = {
     args: {
         children: 'Text',
         disabled: true,

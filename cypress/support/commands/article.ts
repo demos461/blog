@@ -7,9 +7,7 @@ const defaultArticle = {
     img: 'https://ru.legacy.reactjs.org/logo-og.png',
     views: 653,
     createdAt: '21.01.2022',
-    type: [
-        'ECONOMIC',
-    ],
+    type: ['ECONOMIC'],
     blocks: [],
 };
 

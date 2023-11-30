@@ -10,19 +10,20 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 interface AvatarProps {
     className?: string;
     src?: string;
-    size?: number
+    size?: number;
     alt?: string;
 }
 
-export const Avatar = ({
-    className, src, size, alt,
-}: AvatarProps) => {
+export const Avatar = ({ className, src, size, alt }: AvatarProps) => {
     const mods: Mods = {};
 
-    const styles = useMemo<CSSProperties>(() => ({
-        width: size || 100,
-        height: size || 100,
-    }), [size]);
+    const styles = useMemo<CSSProperties>(
+        () => ({
+            width: size || 100,
+            height: size || 100,
+        }),
+        [size],
+    );
 
     const errorFallback = <UserIcon width={size} height={size} className={cls.icon} />;
 

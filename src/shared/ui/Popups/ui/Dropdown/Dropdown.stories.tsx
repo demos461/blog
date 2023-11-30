@@ -6,7 +6,7 @@ import { Button } from '../../../Button/Button';
 
 import { Dropdown } from './Dropdown';
 
-const meta:Meta<typeof Dropdown> = {
+const meta: Meta<typeof Dropdown> = {
     title: 'shared/Dropdown',
     component: Dropdown,
 };
@@ -14,7 +14,7 @@ export default meta;
 
 type Story = StoryObj<typeof Dropdown>;
 
-export const Primary : Story = {
+export const Primary: Story = {
     args: {
         trigger: <Button>Open</Button>,
         items: [

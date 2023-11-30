@@ -1,9 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/consts';
-import {
-    Article,
-} from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 import { ArticleListItem } from './ArticleListItem';
 
@@ -13,7 +11,7 @@ const meta: Meta<typeof ArticleListItem> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof ArticleListItem>
+type Story = StoryObj<typeof ArticleListItem>;
 
 const article: Article = {
     id: '1',
@@ -89,7 +87,7 @@ const article: Article = {
     ],
 };
 
-export const Big : Story = {
+export const Big: Story = {
     args: {
         article,
         view: ArticleView.BIG,

@@ -1,4 +1,7 @@
-import { getArticleCommentsError, getArticleCommentsIsLoading } from './commentsSelectors';
+import {
+    getArticleCommentsError,
+    getArticleCommentsIsLoading,
+} from './commentsSelectors';
 
 import { StateSchema } from '@/app/providers/StoreProvider';
 

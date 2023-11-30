@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Flex } from './Flex';
 
-const meta:Meta<typeof Flex> = {
+const meta: Meta<typeof Flex> = {
     title: 'shared/Flex',
     component: Flex,
 };
@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof Flex>;
 
-export const Row : Story = {
+export const Row: Story = {
     args: {
         children: (
             <>
@@ -39,7 +39,7 @@ export const Column: Story = {
     },
 };
 
-export const ColumnGap16 : Story = {
+export const ColumnGap16: Story = {
     args: {
         gap: '16',
         direction: 'column',
@@ -54,7 +54,7 @@ export const ColumnGap16 : Story = {
     },
 };
 
-export const ColumnAlignStart : Story = {
+export const ColumnAlignStart: Story = {
     args: {
         align: 'start',
         direction: 'column',
@@ -69,7 +69,7 @@ export const ColumnAlignStart : Story = {
     },
 };
 
-export const ColumnAlignEnd : Story = {
+export const ColumnAlignEnd: Story = {
     args: {
         align: 'end',
         direction: 'column',
@@ -98,7 +98,7 @@ export const RowGap4: Story = {
     },
 };
 
-export const RowGap8 : Story = {
+export const RowGap8: Story = {
     args: {
         gap: '8',
         children: (
@@ -112,7 +112,7 @@ export const RowGap8 : Story = {
     },
 };
 
-export const RowGap16 : Story = {
+export const RowGap16: Story = {
     args: {
         gap: '16',
         children: (
@@ -126,7 +126,7 @@ export const RowGap16 : Story = {
     },
 };
 
-export const RowGap32 : Story = {
+export const RowGap32: Story = {
     args: {
         gap: '32',
         children: (

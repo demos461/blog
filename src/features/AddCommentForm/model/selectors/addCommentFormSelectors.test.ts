@@ -1,7 +1,4 @@
-import {
-    getAddCommentFormError,
-    getAddCommentFormText,
-} from './addCommentFormSelectors';
+import { getAddCommentFormError, getAddCommentFormText } from './addCommentFormSelectors';
 
 import { StateSchema } from '@/app/providers/StoreProvider';
 

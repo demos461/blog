@@ -41,7 +41,7 @@ describe('validateProfileData.test', () => {
     });
 
     test('incorrect all', () => {
-        const result = validateProfileData({ });
+        const result = validateProfileData({});
 
         expect(result).toEqual([
             ValidateProfileError.INCORRECT_USER_DATA,

@@ -12,9 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof ArticleDetailsComments>;
 
-export const Primary : Story = {
-    args: {
-
-    },
+export const Primary: Story = {
+    args: {},
     decorators: [StoreDecorator({})],
 };

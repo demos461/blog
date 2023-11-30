@@ -26,9 +26,7 @@ const article: Article = {
 };
 
 export const Primary: Story = {
-    args: {
-
-    },
+    args: {},
     decorators: [StoreDecorator({})],
     parameters: {
         mockData: [

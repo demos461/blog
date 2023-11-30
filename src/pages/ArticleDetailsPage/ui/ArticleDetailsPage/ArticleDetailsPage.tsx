@@ -27,10 +27,8 @@ const reducers: ReducersList = {
 };
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
-    const {
-        className,
-    } = props;
-    const { id } = useParams<{id: string}>();
+    const { className } = props;
+    const { id } = useParams<{ id: string }>();
 
     if (!id) {
         return null;
@@ -46,7 +44,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                 <ArticleDetailsComments id={id} />
             </Page>
         </DynamicModuleLoader>
-
     );
 };
 

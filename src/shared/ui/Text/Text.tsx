@@ -6,7 +6,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 export enum TextTheme {
     PRIMARY = 'primary',
-    ERROR = 'error'
+    ERROR = 'error',
 }
 
 export enum TextAlign {
@@ -28,7 +28,7 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
-    'data-testid'?: string
+    'data-testid'?: string;
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3';
@@ -53,16 +53,24 @@ export const Text = memo((props: TextProps) => {
     const HeaderTag = mapSizeToHeaderTag[size];
 
     return (
-        <div className={classNames(cls.Text, {}, [cls[theme], cls[align], cls[size], className])}>
+        <div
+            className={classNames(cls.Text, {}, [
+                cls[theme],
+                cls[align],
+                cls[size],
+                className,
+            ])}
+        >
             {title && (
-                <HeaderTag
-                    data-testid={`${dataTestId}.Header`}
-                    className={cls.title}
-                >
+                <HeaderTag data-testid={`${dataTestId}.Header`} className={cls.title}>
                     {title}
                 </HeaderTag>
             )}
-            {text && <p data-testid={`${dataTestId}.Paragraph`} className={cls.text}>{text}</p>}
+            {text && (
+                <p data-testid={`${dataTestId}.Paragraph`} className={cls.text}>
+                    {text}
+                </p>
+            )}
         </div>
     );
 });

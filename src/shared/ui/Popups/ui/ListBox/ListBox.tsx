@@ -15,7 +15,7 @@ import { DropdownDirection } from '@/shared/types/ui';
 export interface ListBoxItem {
     value: string;
     content: ReactNode;
-    disabled?: boolean
+    disabled?: boolean;
 }
 
 interface ListBoxProps {
@@ -25,8 +25,8 @@ interface ListBoxProps {
     defaultValue?: string;
     onChange: (value: string) => void;
     readonly?: boolean;
-    className?: string
-    direction: DropdownDirection
+    className?: string;
+    direction: DropdownDirection;
 }
 
 export const ListBox = memo((props: ListBoxProps) => {
@@ -45,8 +45,7 @@ export const ListBox = memo((props: ListBoxProps) => {
 
     return (
         <HStack gap="4">
-            {label
-                && <span>{`${label}>`}</span>}
+            {label && <span>{`${label}>`}</span>}
             <HListBox
                 disabled={readonly}
                 as="div"
@@ -68,16 +67,16 @@ export const ListBox = memo((props: ListBoxProps) => {
                             as={Fragment}
                         >
                             {({ active, selected }) => (
-                                <li className={classNames(cls.item, {
-                                    [cls.selected]: selected,
-                                    [cls.active]: active,
-                                    [popupCls.disabled]: item.disabled,
-                                })}
+                                <li
+                                    className={classNames(cls.item, {
+                                        [cls.selected]: selected,
+                                        [cls.active]: active,
+                                        [popupCls.disabled]: item.disabled,
+                                    })}
                                 >
                                     {item.content}
                                 </li>
                             )}
-
                         </HListBox.Option>
                     ))}
                 </HListBox.Options>

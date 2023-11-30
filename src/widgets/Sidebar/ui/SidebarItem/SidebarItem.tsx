@@ -12,8 +12,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/AppLink';
 
 interface SidebarItemProps {
-    item: SidebarItemType,
-    collapsed: boolean
+    item: SidebarItemType;
+    collapsed: boolean;
 }
 
 export const SidebarItem = memo((props: SidebarItemProps) => {
@@ -29,7 +29,6 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
         <AppLink
             to={item.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed }, [])}
-
         >
             <item.Icon className={cls.icon} />
             <span className={cls.link}>{t(item.text)}</span>

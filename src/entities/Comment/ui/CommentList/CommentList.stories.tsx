@@ -33,7 +33,7 @@ export const Primary: Story = {
         ],
     },
 };
-export const Loading : Story = {
+export const Loading: Story = {
     args: {
         ...Primary.args,
         isLoading: true,

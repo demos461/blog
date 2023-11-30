@@ -7,14 +7,11 @@ import { Code } from '@/shared/ui/Code';
 
 interface ArticleCodeBlockComponentProps {
     className?: string;
-    block: ArticleCodeBlock
+    block: ArticleCodeBlock;
 }
 
 export const ArticleCodeBlockComponent = memo((props: ArticleCodeBlockComponentProps) => {
-    const {
-        className,
-        block,
-    } = props;
+    const { className, block } = props;
 
     return (
         <div className={classNames('', {}, [className])}>

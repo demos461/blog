@@ -19,7 +19,7 @@ interface RatingCardProps {
     hasFeedback?: boolean;
     onCancel?: (starsCount: number) => void;
     onAccept?: (startsCount: number, feedback?: string) => void;
-    rate?:number;
+    rate?: number;
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
@@ -37,14 +37,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [starsCount, setStarsCount] = useState(rate);
     const [feedback, setFeedback] = useState('');
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [hasFeedback, onAccept]);
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandle = useCallback(() => {
         setIsModalOpen(false);
@@ -72,15 +75,27 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <Card max className={className} data-testid="RatingCard">
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Спасибо за оценку!') : title} />
-                <StarRating selectedStarts={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStarts={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} onClose={cancelHandle}>
                     <VStack max gap="32">
                         {modalContent}
                         <HStack max gap="16" justify="end">
-                            <Button data-testid="RatingCard.Send" onClick={acceptHandle}>{t('Отправить')}</Button>
-                            <Button data-testid="RatingCard.Clise" onClick={cancelHandle} theme={ButtonTheme.OUTLINE}>{t('Закрыть')}</Button>
+                            <Button data-testid="RatingCard.Send" onClick={acceptHandle}>
+                                {t('Отправить')}
+                            </Button>
+                            <Button
+                                data-testid="RatingCard.Clise"
+                                onClick={cancelHandle}
+                                theme={ButtonTheme.OUTLINE}
+                            >
+                                {t('Закрыть')}
+                            </Button>
                         </HStack>
                     </VStack>
                 </Modal>
@@ -89,7 +104,9 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 <Drawer isOpen={isModalOpen} onClose={cancelHandle}>
                     <VStack justify="center" align="center" gap="32">
                         {modalContent}
-                        <Button size={ButtonSize.L} onClick={acceptHandle}>{t('Отправить')}</Button>
+                        <Button size={ButtonSize.L} onClick={acceptHandle}>
+                            {t('Отправить')}
+                        </Button>
                     </VStack>
                 </Drawer>
             </MobileView>

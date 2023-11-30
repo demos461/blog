@@ -5,13 +5,13 @@ import { Text, TextTheme } from '../Text';
 
 import { AppImage } from './AppImage';
 
-const meta:Meta<typeof AppImage> = {
+const meta: Meta<typeof AppImage> = {
     title: 'shared/AppImage',
     component: AppImage,
 };
 export default meta;
 
-type Story = StoryObj<typeof AppImage>
+type Story = StoryObj<typeof AppImage>;
 
 export const Primary: Story = {
     args: {

@@ -22,32 +22,30 @@ describe('profileReducer.test', () => {
         const state: DeepPartial<ProfileSchema> = {
             readonly: false,
         };
-        expect(profileReducer(
-            state as ProfileSchema,
-            profileActions.setReadonly(true),
-        )).toEqual({ readonly: true });
+        expect(
+            profileReducer(state as ProfileSchema, profileActions.setReadonly(true)),
+        ).toEqual({ readonly: true });
     });
 
     test('test set cancel edit', () => {
-        const state: DeepPartial<ProfileSchema> = {
-
-        };
-        expect(profileReducer(
-            state as ProfileSchema,
-            profileActions.cancelEdit(),
-        )).toEqual({ readonly: true, validateErrors: undefined });
+        const state: DeepPartial<ProfileSchema> = {};
+        expect(
+            profileReducer(state as ProfileSchema, profileActions.cancelEdit()),
+        ).toEqual({ readonly: true, validateErrors: undefined });
     });
 
     test('test set update profile', () => {
         const state: DeepPartial<ProfileSchema> = {
             form: { username: '' },
         };
-        expect(profileReducer(
-            state as ProfileSchema,
-            profileActions.updateProfile({
-                username: '123456',
-            }),
-        )).toEqual({ form: { username: '123456' } });
+        expect(
+            profileReducer(
+                state as ProfileSchema,
+                profileActions.updateProfile({
+                    username: '123456',
+                }),
+            ),
+        ).toEqual({ form: { username: '123456' } });
     });
 
     test('test set update profile service pending', () => {
@@ -55,23 +53,21 @@ describe('profileReducer.test', () => {
             isLoading: false,
             validateErrors: [ValidateProfileError.SERVER_ERROR],
         };
-        expect(profileReducer(
-            state as ProfileSchema,
-            updateProfileData.pending,
-        )).toEqual({
-            isLoading: true,
-            validateErrors: undefined,
-        });
+        expect(profileReducer(state as ProfileSchema, updateProfileData.pending)).toEqual(
+            {
+                isLoading: true,
+                validateErrors: undefined,
+            },
+        );
     });
 
     test('test set update profile service fullfiled', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: true,
         };
-        expect(profileReducer(
-            state as ProfileSchema,
-            updateProfileData.fulfilled(data, ''),
-        )).toEqual({
+        expect(
+            profileReducer(state as ProfileSchema, updateProfileData.fulfilled(data, '')),
+        ).toEqual({
             isLoading: false,
             readonly: true,
             validateErrors: undefined,

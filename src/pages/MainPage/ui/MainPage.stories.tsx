@@ -13,8 +13,6 @@ export default meta;
 
 type Story = StoryObj<typeof MainPage>;
 
-export const Primary : Story = {
-    args: {
-
-    },
+export const Primary: Story = {
+    args: {},
 };

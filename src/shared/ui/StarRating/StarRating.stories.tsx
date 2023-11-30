@@ -10,6 +10,6 @@ export default meta;
 
 type Story = StoryObj<typeof StarRating>;
 
-export const Primary : Story = {
+export const Primary: Story = {
     args: {},
 };

@@ -7,8 +7,8 @@ import { useDispatch } from 'react-redux';
 export function buildSlice<
     State,
     CaseReducers extends SliceCaseReducers<State>,
-    Name extends string = string
->(options:CreateSliceOptions<State, CaseReducers, Name>) {
+    Name extends string = string,
+>(options: CreateSliceOptions<State, CaseReducers, Name>) {
     const slice = createSlice(options);
 
     const useActions = (): typeof slice.actions => {

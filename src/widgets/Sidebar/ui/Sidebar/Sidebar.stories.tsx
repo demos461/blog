@@ -4,7 +4,7 @@ import { Sidebar } from './Sidebar';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
-const meta:Meta<typeof Sidebar> = {
+const meta: Meta<typeof Sidebar> = {
     title: 'widgets/Sidebar',
     component: Sidebar,
 };
@@ -12,18 +12,22 @@ export default meta;
 
 type Story = StoryObj<typeof Sidebar>;
 
-export const Primary : Story = {
+export const Primary: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        user: {
-            authData: {},
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: {},
+            },
+        }),
+    ],
 };
 
-export const NoAuth : Story = {
+export const NoAuth: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        user: {},
-    })],
+    decorators: [
+        StoreDecorator({
+            user: {},
+        }),
+    ],
 };

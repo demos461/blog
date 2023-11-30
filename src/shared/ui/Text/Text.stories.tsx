@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Text, TextSize, TextTheme } from './Text';
 
-const meta:Meta<typeof Text> = {
+const meta: Meta<typeof Text> = {
     title: 'shared/Text',
     component: Text,
 };
@@ -10,14 +10,14 @@ export default meta;
 
 type Story = StoryObj<typeof Text>;
 
-export const Primary : Story = {
+export const Primary: Story = {
     args: {
         title: 'Title',
         text: 'Text',
     },
 };
 
-export const Error : Story = {
+export const Error: Story = {
     args: {
         title: 'Title',
         text: 'Text',
@@ -31,13 +31,13 @@ export const onlyTitle: Story = {
     },
 };
 
-export const onlyText : Story = {
+export const onlyText: Story = {
     args: {
         text: 'Text',
     },
 };
 
-export const SizeS : Story = {
+export const SizeS: Story = {
     args: {
         title: 'Title',
         text: 'Text',
@@ -45,7 +45,7 @@ export const SizeS : Story = {
     },
 };
 
-export const SizeM : Story = {
+export const SizeM: Story = {
     args: {
         title: 'Title',
         text: 'Text',
@@ -53,7 +53,7 @@ export const SizeM : Story = {
     },
 };
 
-export const SizeL : Story = {
+export const SizeL: Story = {
     args: {
         title: 'Title',
         text: 'Text',

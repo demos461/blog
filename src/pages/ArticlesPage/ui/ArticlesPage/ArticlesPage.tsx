@@ -3,12 +3,8 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 
-import {
-    fetchNextArticlesPage,
-} from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
-import {
-    initArticlesPage,
-} from '../../model/services/initArticlesPage/initArticlesPage';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
@@ -34,9 +30,7 @@ const reducers: ReducersList = {
 };
 
 const ArticlesPage = (props: ArticlePageProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
 
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
@@ -60,7 +54,6 @@ const ArticlesPage = (props: ArticlePageProps) => {
                 <Text title={t('Статьи')} />
                 <ArticlesPageFilters />
                 <ArticleInfiniteList />
-
             </Page>
         </DynamicModuleLoader>
     );

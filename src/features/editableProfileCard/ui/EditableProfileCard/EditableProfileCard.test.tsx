@@ -40,7 +40,9 @@ describe('features/EditableProfileCard', () => {
     test('Readonly mode should be switch', async () => {
         ComponentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
-        expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
+        expect(
+            screen.getByTestId('EditableProfileCardHeader.CancelButton'),
+        ).toBeInTheDocument();
     });
 
     test('After cancel data should be reset', async () => {
@@ -55,7 +57,9 @@ describe('features/EditableProfileCard', () => {
         expect(screen.getByTestId('ProfileCard.firstname')).toHaveValue('user');
         expect(screen.getByTestId('ProfileCard.lastname')).toHaveValue('user');
 
-        await userEvent.click(screen.getByTestId('EditableProfileCardHeader.CancelButton'));
+        await userEvent.click(
+            screen.getByTestId('EditableProfileCardHeader.CancelButton'),
+        );
 
         expect(screen.getByTestId('ProfileCard.firstname')).toHaveValue('admin');
         expect(screen.getByTestId('ProfileCard.lastname')).toHaveValue('admin');
@@ -68,7 +72,9 @@ describe('features/EditableProfileCard', () => {
 
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.SaveButton'));
 
-        expect(screen.getByTestId('EditableProfileCard.Error.Paragraph')).toBeInTheDocument();
+        expect(
+            screen.getByTestId('EditableProfileCard.Error.Paragraph'),
+        ).toBeInTheDocument();
     });
 
     test('If there are no errors, then a PUT request should be sent to the server', async () => {

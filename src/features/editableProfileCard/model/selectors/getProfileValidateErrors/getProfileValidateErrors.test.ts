@@ -6,7 +6,10 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 
 describe('getProfileValidateErrors.test', () => {
     test('should return validateErrors', () => {
-        const validateErrors = [ValidateProfileError.INCORRECT_USER_DATA, ValidateProfileError.INCORRECT_AGE];
+        const validateErrors = [
+            ValidateProfileError.INCORRECT_USER_DATA,
+            ValidateProfileError.INCORRECT_AGE,
+        ];
         const state: DeepPartial<StateSchema> = {
             profile: {
                 validateErrors,

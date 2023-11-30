@@ -7,9 +7,7 @@ import { BuildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
 const config: StorybookConfig = {
-    stories: [
-        '../../src/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         '@storybook/addon-essentials',
         '@storybook/addon-links',
@@ -55,11 +53,13 @@ const config: StorybookConfig = {
         });
         config!.module!.rules.push(BuildCssLoader(true));
 
-        config!.plugins!.push(new webpack.DefinePlugin({
-            __IS_DEV__: true,
-            __API__: JSON.stringify('https://testapi.com'),
-            __PROJECT__: JSON.stringify('storybook'),
-        }));
+        config!.plugins!.push(
+            new webpack.DefinePlugin({
+                __IS_DEV__: true,
+                __API__: JSON.stringify('https://testapi.com'),
+                __PROJECT__: JSON.stringify('storybook'),
+            }),
+        );
 
         return config;
     },

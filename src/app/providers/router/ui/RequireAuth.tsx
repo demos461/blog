@@ -36,5 +36,5 @@ export const RequireAuth = (props: RequireAuthProps) => {
     }
 
     // eslint-disable-next-line react/jsx-no-useless-fragment
-    return <>{ children }</>;
+    return <>{children}</>;
 };

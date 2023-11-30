@@ -14,16 +14,12 @@ import { Text } from '@/shared/ui/Text';
 
 interface CommentCardProps {
     className?: string;
-    comment: Comment
-    isLoading?: boolean
+    comment: Comment;
+    isLoading?: boolean;
 }
 
 export const CommentCard = memo((props: CommentCardProps) => {
-    const {
-        className,
-        comment,
-        isLoading,
-    } = props;
+    const { className, comment, isLoading } = props;
 
     if (isLoading) {
         return (
@@ -38,10 +34,17 @@ export const CommentCard = memo((props: CommentCardProps) => {
     }
 
     return (
-        <VStack data-testid="CommentCard.Content" gap="8" max className={classNames(cls.CommentCard, {}, [className])}>
+        <VStack
+            data-testid="CommentCard.Content"
+            gap="8"
+            max
+            className={classNames(cls.CommentCard, {}, [className])}
+        >
             <AppLink to={getRouteProfile(comment.user.id)}>
                 <HStack gap="8">
-                    {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} /> }
+                    {comment.user.avatar && (
+                        <Avatar size={30} src={comment.user.avatar} />
+                    )}
                     <Text text={comment.user.username} />
                 </HStack>
             </AppLink>

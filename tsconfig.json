@@ -1,43 +1,37 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    // Куда производится сборка
-    "noImplicitAny": true,
-    // Подсвечивает все места где не указан тип
-    "module": "ESNext",
-    "target": "es5",
-    // В какую спецификацию компилируем
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "strict": true,
-    // компилятор будет обрабатывать не только TS файлы, но и JS файлы
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "esModuleInterop": true,
-    // esModuleInterop позволяет работать с пакетами, которые используют
-    // common js (require() module.export) как с обычными пакетами с помощью import
-    "allowSyntheticDefaultImports": true,
-    // allowSyntheticDefaultImports Если какая-либо библиотека не имеет default import,
-    // лоадеры вроде ts-loader или babel-loader автоматически создают их
-    // вместо такого импорта
-    // import * as React from 'react';
-    // можно писать так
-    // import React from 'react';
-    "isolatedModules": true,
-  },
-  "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": [
-    "./config/jest/setupTests.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-  ],
+        "outDir": "./dist/",
+        // Куда производится сборка
+        "noImplicitAny": true,
+        // Подсвечивает все места где не указан тип
+        "module": "ESNext",
+        "target": "es5",
+        // В какую спецификацию компилируем
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "strict": true,
+        // компилятор будет обрабатывать не только TS файлы, но и JS файлы
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "esModuleInterop": true,
+        // esModuleInterop позволяет работать с пакетами, которые используют
+        // common js (require() module.export) как с обычными пакетами с помощью import
+        "allowSyntheticDefaultImports": true,
+        // allowSyntheticDefaultImports Если какая-либо библиотека не имеет default import,
+        // лоадеры вроде ts-loader или babel-loader автоматически создают их
+        // вместо такого импорта
+        // import * as React from 'react';
+        // можно писать так
+        // import React from 'react';
+        "isolatedModules": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }

@@ -5,10 +5,12 @@ module.exports = {
         jest: true,
     },
     extends: [
+        'prettier',
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:import/recommended',
+        'plugin:prettier/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -31,31 +33,17 @@ module.exports = {
         'no-unused-vars': 'off',
         'unused-imports/no-unused-imports': 'error',
         '@typescript-eslint/no-unused-vars': 'warn',
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
-        'react/jsx-filename-extension': [
-            2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
-        ],
+        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/order': [
             'error',
             {
                 'newlines-between': 'always',
-                pathGroupsExcludedImportTypes: [
-                    'react',
-                ],
+                pathGroupsExcludedImportTypes: ['react'],
                 alphabetize: {
                     order: 'asc',
                     caseInsensitive: true,
                 },
-                groups: [
-                    'builtin',
-                    'external',
-                    'parent',
-                    'sibling',
-                    'index',
-                ],
+                groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
                 pathGroups: [
                     {
                         pattern: 'react',
@@ -91,10 +79,6 @@ module.exports = {
                 ],
             },
         ],
-        'max-len': ['warn', {
-            code: 130,
-            ignoreComments: true,
-        }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
@@ -106,7 +90,11 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'eliasxlii-plugin/layer-imports': [
@@ -126,15 +114,8 @@ module.exports = {
     settings: {
         'import/resolver': {
             node: {
-                paths: [
-                    'src',
-                ],
-                extensions: [
-                    '.js',
-                    '.jsx',
-                    '.ts',
-                    '.tsx',
-                ],
+                paths: ['src'],
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
             },
         },
     },

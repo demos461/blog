@@ -1,5 +1,6 @@
 import {
-    getArticleDetailsData, getArticleDetailsError,
+    getArticleDetailsData,
+    getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from './articleDetails';
 

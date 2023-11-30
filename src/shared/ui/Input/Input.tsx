@@ -4,13 +4,16 @@ import cls from './Input.module.scss';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
+type HTMLInputProps = Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'value' | 'onChange' | 'readOnly'
+>;
 
 interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
     onChange?: (value: string) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -34,12 +37,7 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <div className={classNames(cls.InputWrapper, mods, [className])}>
-            {placeholder
-                && (
-                    <span className={cls.placeholder}>
-                        {`${placeholder}>`}
-                    </span>
-                )}
+            {placeholder && <span className={cls.placeholder}>{`${placeholder}>`}</span>}
             <input
                 className={cls.input}
                 type={type}

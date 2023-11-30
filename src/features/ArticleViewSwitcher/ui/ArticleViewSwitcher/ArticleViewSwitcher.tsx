@@ -16,11 +16,7 @@ interface ArticleViewSwitcherProps {
 }
 
 export const ArticleViewSwitcher = memo((props: ArticleViewSwitcherProps) => {
-    const {
-        className,
-        view,
-        onViewClick,
-    } = props;
+    const { className, view, onViewClick } = props;
 
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);
@@ -28,20 +24,14 @@ export const ArticleViewSwitcher = memo((props: ArticleViewSwitcherProps) => {
 
     return (
         <div className={classNames(cls.ArticleViewSwitcher, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={onClick(ArticleView.SMALL)}
-            >
+            <Button theme={ButtonTheme.CLEAR} onClick={onClick(ArticleView.SMALL)}>
                 <GridIcon
                     className={classNames(cls.icon, {
                         [cls.selected]: view === ArticleView.SMALL,
                     })}
                 />
             </Button>
-            <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={onClick(ArticleView.BIG)}
-            >
+            <Button theme={ButtonTheme.CLEAR} onClick={onClick(ArticleView.BIG)}>
                 <ListIcon
                     className={classNames(cls.icon, {
                         [cls.selected]: view === ArticleView.BIG,

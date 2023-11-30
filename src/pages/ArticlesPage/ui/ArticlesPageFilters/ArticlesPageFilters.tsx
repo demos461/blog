@@ -10,18 +10,12 @@ import {
     getArticlesPageSort,
     getArticlesPageType,
 } from '../../model/selectors/articlesPageSelectors';
-import {
-    fetchArticlesList,
-} from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 
 import cls from './ArticlesPageFilters.module.scss';
 
-import {
-    ArticleSortField,
-    ArticleType,
-    ArticleView,
-} from '@/entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { ArticleSortSelect } from '@/features/ArticleSortSelect';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import { ArticleViewSwitcher } from '@/features/ArticleViewSwitcher';
@@ -37,9 +31,7 @@ interface ArticlesPageFiltersProps {
 }
 
 export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
     const { t } = useTranslation('article');
     const dispatch = useAppDispatch();
     const view = useSelector(getArticlesPageIsView);
@@ -54,33 +46,48 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
     const debouncedFetchData = useDebounce(fetchData, 500);
 
-    const onChangeView = useCallback((view: ArticleView) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
+    const onChangeView = useCallback(
+        (view: ArticleView) => {
+            dispatch(articlesPageActions.setView(view));
+        },
+        [dispatch],
+    );
 
-    const onChangeOrder = useCallback((order: SortOrder) => {
-        dispatch(articlesPageActions.setOrder(order));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+    const onChangeOrder = useCallback(
+        (order: SortOrder) => {
+            dispatch(articlesPageActions.setOrder(order));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [dispatch, fetchData],
+    );
 
-    const onChangeSort = useCallback((sort: ArticleSortField) => {
-        dispatch(articlesPageActions.setSort(sort));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+    const onChangeSort = useCallback(
+        (sort: ArticleSortField) => {
+            dispatch(articlesPageActions.setSort(sort));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [dispatch, fetchData],
+    );
 
-    const onChangeSearch = useCallback((search: string) => {
-        dispatch(articlesPageActions.setSearch(search));
-        dispatch(articlesPageActions.setPage(1));
-        debouncedFetchData();
-    }, [debouncedFetchData, dispatch]);
+    const onChangeSearch = useCallback(
+        (search: string) => {
+            dispatch(articlesPageActions.setSearch(search));
+            dispatch(articlesPageActions.setPage(1));
+            debouncedFetchData();
+        },
+        [debouncedFetchData, dispatch],
+    );
 
-    const onChangeType = useCallback((value: ArticleType) => {
-        dispatch(articlesPageActions.setType(value));
-        dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [fetchData, dispatch]);
+    const onChangeType = useCallback(
+        (value: ArticleType) => {
+            dispatch(articlesPageActions.setType(value));
+            dispatch(articlesPageActions.setPage(1));
+            fetchData();
+        },
+        [fetchData, dispatch],
+    );
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
@@ -100,7 +107,11 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     onChange={onChangeSearch}
                 />
             </Card>
-            <ArticleTypeTabs value={type} onChangeType={onChangeType} className={cls.tabs} />
+            <ArticleTypeTabs
+                value={type}
+                onChangeType={onChangeType}
+                className={cls.tabs}
+            />
         </div>
     );
 });

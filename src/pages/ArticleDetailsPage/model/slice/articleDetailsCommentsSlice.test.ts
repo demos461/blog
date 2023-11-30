@@ -1,18 +1,18 @@
-import {
-    fetchCommentsByArticleId,
-} from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 
 import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 
-const data = [{
-    id: '1',
-    text: 'hello world',
-    user: {
+const data = [
+    {
         id: '1',
-        username: 'user',
+        text: 'hello world',
+        user: {
+            id: '1',
+            username: 'user',
+        },
     },
-}];
+];
 
 describe('articleDetailsComments.test', () => {
     test('test set update profile service pending', () => {
@@ -20,10 +20,12 @@ describe('articleDetailsComments.test', () => {
             isLoading: false,
             error: undefined,
         };
-        expect(articleDetailsCommentsReducer(
-            state as ArticleDetailsCommentsSchema,
-            fetchCommentsByArticleId.pending,
-        )).toEqual({
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.pending,
+            ),
+        ).toEqual({
             isLoading: true,
             error: undefined,
         });
@@ -34,10 +36,12 @@ describe('articleDetailsComments.test', () => {
             isLoading: false,
             error: undefined,
         };
-        expect(articleDetailsCommentsReducer(
-            state as ArticleDetailsCommentsSchema,
-            fetchCommentsByArticleId.fulfilled(data, '', ''),
-        )).toEqual({
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.fulfilled(data, '', ''),
+            ),
+        ).toEqual({
             isLoading: false,
             error: undefined,
             ids: ['1'],

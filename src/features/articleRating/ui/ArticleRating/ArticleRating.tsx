@@ -12,41 +12,50 @@ import { HStack } from '@/shared/ui/Stack';
 
 interface ArticleRatingProps {
     className?: string;
-    articleId: string
+    articleId: string;
 }
 
 const ArticleRating = memo((props: ArticleRatingProps) => {
-    const {
-        className,
-        articleId,
-    } = props;
+    const { className, articleId } = props;
     const { t } = useTranslation();
     const userData = useSelector(getUserAuthData);
-    const { data, isLoading } = useGetArticleRating({ articleId, userId: userData?.id ?? '' });
+    const { data, isLoading } = useGetArticleRating({
+        articleId,
+        userId: userData?.id ?? '',
+    });
     const [rateArticleMutation] = useRateArticle();
 
     const rating = data?.[0];
 
-    const handleRateArticle = useCallback((startsCount: number, feedback?: string) => {
-        try {
-            rateArticleMutation({
-                userId: userData?.id ?? '',
-                articleId,
-                rate: startsCount,
-                feedback,
-            });
-        } catch (e) {
-            console.log(e);
-        }
-    }, [articleId, rateArticleMutation, userData?.id]);
+    const handleRateArticle = useCallback(
+        (startsCount: number, feedback?: string) => {
+            try {
+                rateArticleMutation({
+                    userId: userData?.id ?? '',
+                    articleId,
+                    rate: startsCount,
+                    feedback,
+                });
+            } catch (e) {
+                console.log(e);
+            }
+        },
+        [articleId, rateArticleMutation, userData?.id],
+    );
 
-    const onCancelHandler = useCallback((startsCount: number) => {
-        handleRateArticle(startsCount);
-    }, [handleRateArticle]);
+    const onCancelHandler = useCallback(
+        (startsCount: number) => {
+            handleRateArticle(startsCount);
+        },
+        [handleRateArticle],
+    );
 
-    const onAcceptHandler = useCallback((startsCount: number, feedback?: string) => {
-        handleRateArticle(startsCount, feedback);
-    }, [handleRateArticle]);
+    const onAcceptHandler = useCallback(
+        (startsCount: number, feedback?: string) => {
+            handleRateArticle(startsCount, feedback);
+        },
+        [handleRateArticle],
+    );
 
     if (isLoading) {
         return (
